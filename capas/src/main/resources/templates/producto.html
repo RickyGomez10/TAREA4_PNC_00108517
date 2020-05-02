@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Producto</title>
+</head>
+<body>
+	<h1> Ingreso de productos - 00108517</h1>
+	<form th:action="@{/procesar}" method="post" th:object="${producto}">
+	
+		<label for="codigo"> Código: </label>
+		<input type="text" name="codigo" th:field="*{codigo}">
+		<span th:errors="*{codigo}" style="color: #FF0000"></span><br>
+		
+		<label for="nombre"> Nombre: </label>
+		<input type="text" name="nombre" th:field="*{nombre}">
+		<span th:errors="*{nombre}" style="color: #FF0000"></span><br>
+		
+		
+		<label for="marca"> Marca: </label>
+		<input type="text" name="marca" th:field="*{marca}">
+		<span th:errors="*{marca}" style="color: #FF0000"></span><br>
+		
+		
+		<label for="descripcion"> Descripción: </label>
+		<input type="text" name="descripcion" th:field="*{descripcion}">
+		<span th:errors="*{descripcion}" style="color: #FF0000"></span><br>
+		
+		
+		<label for="existencias"> Existencias: </label>
+		<input type="text" name="existencias" th:field="*{existencias}">
+		<span th:errors="*{existencias}" style="color: #FF0000"></span><br>
+		
+		
+		<label for="fecha"> Fecha de ingreso: </label>
+		<input type="text" name="fecha" th:field="*{fecha}">
+		<span th:errors="*{fecha}" style="color: #FF0000"></span><br>
+			
+		<input type="submit" value="Guardar Producto">
+	</form>
+</body>
